@@ -1,11 +1,11 @@
-FROM alpine:3.6
+FROM alpine:3.12.3
 
 ENV VERSION v3.5.2
 
 WORKDIR /
 
 # Enable SSL
-RUN apk --update add ca-certificates wget python curl tar jq
+RUN apk --update add --no-cache python3 py3-pip ca-certificates wget curl tar jq
 
 # Install gcloud and kubectl
 # kubectl will be available at /google-cloud-sdk/bin/kubectl
