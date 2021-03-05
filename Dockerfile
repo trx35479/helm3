@@ -52,3 +52,7 @@ RUN mkdir /tmp
 RUN helm plugin install https://github.com/viglesiasce/helm-gcs.git
 RUN helm plugin install https://github.com/databus23/helm-diff
 RUN helm plugin install https://github.com/helm/helm-2to3
+RUN helm plugin install https://github.com/belitre/helm-push-artifactory-plugin --version 1.0.2
+
+ENTRYPOINT ["helm"]
+CMD ["--help"]
