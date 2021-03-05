@@ -23,6 +23,5 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-          context: .
           push: true
           tags: roweluchi/helm3:latest
