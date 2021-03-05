@@ -21,4 +21,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}            
       - name: Push to Docker Hub
-        run: 
+        run: docker push roweluchi/helm3:latest   
