@@ -21,7 +21,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}            
       - name: Push to Docker Hub
-        uses: docker/build-push-action@v1
-        with:
-          push: true
-          tags: roweluchi/helm3:latest
+        run: 
