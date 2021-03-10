@@ -5,7 +5,7 @@ ENV VERSION v3.5.2
 WORKDIR /
 
 # Enable SSL
-RUN apk --update add --no-cache python3 py3-pip ca-certificates wget curl tar jq
+RUN apk --update add --no-cache python3 py3-pip ca-certificates wget curl tar jq zip
 
 # Install gcloud and kubectl
 # kubectl will be available at /google-cloud-sdk/bin/kubectl
@@ -32,7 +32,7 @@ RUN curl -o /tmp/$FILENAME ${HELM_URL} \
 
 # Helm plugins require git
 # helm-diff requires bash, curl
-RUN apk --update add git bash
+ RUN apk --update add git bash
 
 # Install envsubst [better than using 'sed' for yaml substitutions]
 ENV BUILD_DEPS="gettext"  \
